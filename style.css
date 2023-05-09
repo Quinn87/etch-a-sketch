@@ -9,9 +9,9 @@ h1 {
 }
 
 .cells {
-    border: 1px solid blue;
+    border: 1px solid blue;   
 }
 
-/* .horizontal {
-    border: 1px solid green;
-} */
+.cellsHover {
+    background-color: black;
+}
