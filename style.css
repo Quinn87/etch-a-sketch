@@ -4,7 +4,7 @@ h1 {
 
 .main {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     /* justify-content: center; */
     border: 1px solid black;
 }
@@ -21,8 +21,7 @@ h1 {
 }
 
 .cells {
-    border: 1px solid blue;
-    background-color: gray;   
+    border: 1px solid blue;  
 }
 
 .cellsHover {

@@ -16,6 +16,6 @@ for (i = 0; i < gridsize; i++) {
 
 const gridCells = document.querySelectorAll('.cells');
 
-gridCells.forEach(cell => cell.addEventListener ('click', function(){
-    console.log("Click");
+gridCells.forEach(cell => cell.addEventListener ('mousemove', function(){
+    cell.classList.add('cellsHover')
 }));
