@@ -1,4 +1,4 @@
-const container = document.querySelector('#content');
+const container = document.querySelector('#grid');
 const gridCells = document.querySelectorAll('.cells');
 let gridsize = 16
 

@@ -2,10 +2,22 @@ h1 {
     text-align: center;
 }
 
-#content {
+.main {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    /* justify-content: center; */
     border: 1px solid black;
+}
+
+#grid{
+    width: 500px;
+    height: 500px;
+    display: flex;
+}
+
+.settings {
+    display: flex;
+    border: solid black 1px;
 }
 
 .cells {
