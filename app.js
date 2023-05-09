@@ -1,10 +1,10 @@
-const container = document.querySelector('#grid');
-const gridCells = document.querySelectorAll('.cells');
+const grid = document.querySelector('#grid');
+
 let gridsize = 16
 
 for (i = 0; i < gridsize; i++) {
     const div = document.createElement('div');
-    container.appendChild(div);
+    grid.appendChild(div);
 
     for (j = 0; j < gridsize; j++){
         const nextDiv = document.createElement('div');
@@ -14,4 +14,8 @@ for (i = 0; i < gridsize; i++) {
     }
 }
 
-foreach.gridCells()
+const gridCells = document.querySelectorAll('.cells');
+
+gridCells.forEach(cell => cell.addEventListener ('click', function(){
+    console.log("Click");
+}));
