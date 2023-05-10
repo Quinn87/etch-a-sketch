@@ -1,4 +1,8 @@
 const grid = document.querySelector('#grid');
+const clearButton = document.querySelector('.clear')
+const gridSizeButton = document.querySelector('.gridSizeButton')
+const erase = document.querySelector('.erase')
+const draw = document.querySelector('.draw')
 
 let gridsize = 16;
 let cellSize = 600 / gridsize;
@@ -18,6 +22,18 @@ for (i = 0; i < gridsize; i++) {
 
 const gridCells = document.querySelectorAll('.cells');
 
-gridCells.forEach(cell => cell.addEventListener ('mousemove', function(){
-    cell.classList.add('cellsHover')
-}));
+draw.addEventListener('click', function (){
+    gridCells.forEach(cell => cell.addEventListener ('mousemove', function(){
+        cell.classList.add('cellsHover')
+    }));
+})
+
+erase.addEventListener('click', function (){
+    gridCells.forEach(cell => cell.addEventListener ('mousemove', function(){
+        cell.classList.remove('cellsHover')
+    }));
+})
+
+clearButton.addEventListener('click', function (){
+    gridCells.forEach(cell => cell.classList.remove('cellsHover'))
+});
