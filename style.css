@@ -4,7 +4,8 @@ h1 {
 
 .main {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    margin-top: 50px;
 }
 
 #grid{
@@ -12,13 +13,14 @@ h1 {
     height: 600px;
     display: flex;
     border: 1px black solid;
+    margin-left: 50px;
 }
 
 .settings {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    border: solid black 1px;
+    justify-content: space-evenly;
+    margin-right: 50px;
 }
 
 .cells {
