@@ -4,7 +4,9 @@ const gridSizeRange = document.querySelector('#gridSizeRange')
 const erase = document.querySelector('.erase')
 const draw = document.querySelector('.draw')
 
-buildGrid();
+let gridSize = 16;
+
+buildGrid(gridSize);
 
 const gridCells = document.querySelectorAll('.cells');
 
@@ -44,9 +46,8 @@ clearButton.addEventListener('click', function (){
 //     }
 // })
 
-function buildGrid (){
+function buildGrid (gridSize){
     const grid = document.querySelector('#grid');
-    let gridSize = 16;
     let cellSize = 600 / gridSize;
 
     for (i = 0; i < Math.pow(gridSize, 2)  ; i++) {
