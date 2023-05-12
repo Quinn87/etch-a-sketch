@@ -33,6 +33,8 @@ h1 {
 .cells {
     margin: 0;
     padding: 0;
+    border-top: solid black 1px;
+    border-left: solid black 1px;
 }
 
 .cellsHover {
