@@ -16,6 +16,7 @@ h1 {
     width: 600px;
     height: 600px;
     display: flex;
+    flex-wrap: wrap;
     /* border: 1px black solid; */
     margin-left: 50px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
