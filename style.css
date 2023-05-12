@@ -1,3 +1,7 @@
+body {
+    background-color: whitesmoke;
+}
+
 h1 {
     text-align: center;
 }
@@ -12,8 +16,10 @@ h1 {
     width: 600px;
     height: 600px;
     display: flex;
-    border: 1px black solid;
+    /* border: 1px black solid; */
     margin-left: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
 }
 
 .settings {
