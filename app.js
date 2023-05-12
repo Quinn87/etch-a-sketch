@@ -1,19 +1,10 @@
-const grid = document.querySelector('#grid');
+// const grid = document.querySelector('#grid');
 const clearButton = document.querySelector('.clear')
 const gridSizeRange = document.querySelector('#gridSizeRange')
 const erase = document.querySelector('.erase')
 const draw = document.querySelector('.draw')
 
-let gridSize = 70;
-let cellSize = 600 / gridSize;
-
-for (i = 0; i < Math.pow(gridSize, 2)  ; i++) {
-    const cell = document.createElement('div');
-    cell.style.height = cellSize + "px";
-    cell.style.width = cellSize + "px";
-    cell.classList.add('cells')
-    grid.appendChild(cell);
-}
+buildGrid();
 
 const gridCells = document.querySelectorAll('.cells');
 
@@ -52,3 +43,17 @@ clearButton.addEventListener('click', function (){
 //         }
 //     }
 // })
+
+function buildGrid (){
+    const grid = document.querySelector('#grid');
+    let gridSize = 16;
+    let cellSize = 600 / gridSize;
+
+    for (i = 0; i < Math.pow(gridSize, 2)  ; i++) {
+        const cell = document.createElement('div');
+        cell.style.height = cellSize + "px";
+        cell.style.width = cellSize + "px";
+        cell.classList.add('cells')
+        grid.appendChild(cell);
+    }
+}
