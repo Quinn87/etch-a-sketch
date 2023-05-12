@@ -18,7 +18,11 @@
             <button class="clear">Clear</button>
             <button class="draw">Draw Mode</button>
             <button class="erase">Erase Mode</button>
-            <button class="gridSizeButton">Grid Size</button>
+            <div>
+                <input type="range" id="gridSizeRange" name="gridSize"
+                       min="16" max="100">
+                <label for="gridSizeRange">Grid Size</label>
+              </div>
         </div>
         <div id="grid"></div>
     </div>

@@ -1,26 +1,28 @@
 const grid = document.querySelector('#grid');
 const clearButton = document.querySelector('.clear')
-const gridSizeButton = document.querySelector('.gridSizeButton')
+const gridSizeRange = document.querySelector('#gridSizeRange')
 const erase = document.querySelector('.erase')
 const draw = document.querySelector('.draw')
 
-let gridsize = 16;
-let cellSize = 600 / gridsize;
+let gridSize = 16;
+let cellSize = 600 / gridSize;
 
-for (i = 0; i < gridsize; i++) {
-    const div = document.createElement('div');
-    grid.appendChild(div);
+for (i = 0; i < gridSize; i++) {
+    const firstDiv = document.createElement('div');
+    firstDiv.classList.add('firstDiv')
+    grid.appendChild(firstDiv);
 
-    for (j = 0; j < gridsize; j++){
+    for (j = 0; j < gridSize; j++){
         const nextDiv = document.createElement('div');
         nextDiv.style.height = cellSize + "px";
         nextDiv.style.width = cellSize + "px";
         nextDiv.classList.add('cells')
-        div.appendChild(nextDiv);
+        firstDiv.appendChild(nextDiv);
     }
 }
 
 const gridCells = document.querySelectorAll('.cells');
+const firstDivs = document.querySelectorAll('.firstDiv');
 
 draw.addEventListener('click', function (){
     gridCells.forEach(cell => cell.addEventListener ('mousemove', function(){
@@ -37,3 +39,23 @@ erase.addEventListener('click', function (){
 clearButton.addEventListener('click', function (){
     gridCells.forEach(cell => cell.classList.remove('cellsHover'))
 });
+
+// gridSizeRange.addEventListener('change', function(e){
+//     gridCells.forEach(cell => cell.remove());
+//     div.remove();
+//     gridSize = e.target.valueAsNumber;
+//     cellSize = 600 / gridSize;
+//     console.log(gridSize);
+//     for (i = 0; i < gridSize; i++) {
+//         const div = document.createElement('div');
+//         grid.appendChild(div);
+    
+//         for (j = 0; j < gridSize; j++){
+//             const nextDiv = document.createElement('div');
+//             nextDiv.style.height = cellSize + "px";
+//             nextDiv.style.width = cellSize + "px";
+//             nextDiv.classList.add('cells')
+//             div.appendChild(nextDiv);
+//         }
+//     }
+// })
